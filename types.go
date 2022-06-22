@@ -68,16 +68,16 @@ type JournalEntryWithLines struct {
 	Lines struct {
 		Data JournalEntryLines `json:"_data"`
 	} `json:"lines"`
-	ID                   int    `json:"id,omitempty"`
-	Bookperiod           int    `json:"bookperiod"`
-	Bookyear             int    `json:"bookyear"`
-	Date                 Date   `json:"date"`
-	JournalID            string `json:"journalId"`
-	OpeningBalance       int    `json:"openingBalance,omitempty"`
-	ClosingBalance       int    `json:"closingBalance,omitempty"`
-	Description          string `json:"description"`
-	SourceDocumentNumber string `json:"sourceDocumentNumber,omitempty"`
-	State                int    `json:"state,omitempty"`
+	ID                   int     `json:"id,omitempty"`
+	Bookperiod           int     `json:"bookperiod"`
+	Bookyear             int     `json:"bookyear"`
+	Date                 Date    `json:"date"`
+	JournalID            string  `json:"journalId"`
+	OpeningBalance       float64 `json:"openingBalance,omitempty"`
+	ClosingBalance       float64 `json:"closingBalance,omitempty"`
+	Description          string  `json:"description"`
+	SourceDocumentNumber string  `json:"sourceDocumentNumber,omitempty"`
+	State                int     `json:"state,omitempty"`
 	// Meta                 struct {
 	// 	AdministrationID   int    `json:"administrationId"`
 	// 	AdministrationName string `json:"administrationName"`
