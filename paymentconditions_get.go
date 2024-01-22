@@ -3,6 +3,7 @@ package asperion
 import (
 	"net/http"
 	"net/url"
+	"strconv"
 
 	"github.com/omniboost/go-asperion/utils"
 )
@@ -127,6 +128,8 @@ func (r *PaymentConditionsGetRequest) Do() (PaymentConditionsGetResponseBody, er
 	if err != nil {
 		return *r.NewResponseBody(), err
 	}
+
+	req.Header.Add("X-Tenant-Id", strconv.Itoa(r.client.TenantID()))
 
 	// Process query parameters
 	err = utils.AddQueryParamsToRequest(r.QueryParams(), req, false)
